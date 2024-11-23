@@ -1,0 +1,66 @@
+<configuration>
+    <!-- Define o esquema de S3 -->
+    <property>
+        <name>fs.s3a.impl</name>
+        <value>org.apache.hadoop.fs.s3a.S3AFileSystem</value>
+    </property>
+
+    <!-- Chave de acesso e secreta do MinIO -->
+    <property>
+        <name>fs.s3a.access.key</name>
+        <value>minioadmin</value>
+    </property>
+    
+    <property>
+        <name>fs.s3a.secret.key</name>
+        <value>minioadmin</value>
+    </property>
+
+    <!-- O endpoint do MinIO (em vez do endpoint padrão da AWS) -->
+    <property>
+        <name>fs.s3a.endpoint</name>
+        <value>http://minio:9000</value>
+    </property>
+
+    <!-- Define se SSL está habilitado ou não -->
+    <property>
+        <name>fs.s3a.connection.ssl.enabled</name>
+        <value>false</value>
+    </property>
+
+    <!-- Número de conexões máximas para o cliente S3 -->
+    <property>
+        <name>fs.s3a.connection.maximum</name>
+        <value>50</value>
+    </property>
+
+    <!-- Tamanho de parte para uploads multipart (em MB) -->
+    <property>
+        <name>fs.s3a.multipart.size</name>
+        <value>104857600</value>
+    </property>
+
+    <!-- Número máximo de tentativas para reenvios -->
+    <property>
+        <name>fs.s3a.attempts.maximum</name>
+        <value>10</value>
+    </property>
+
+    <!-- Timeout da conexão -->
+    <property>
+        <name>fs.s3a.connection.timeout</name>
+        <value>5000</value>
+    </property>
+
+    <!-- Habilita o cache de arquivos no S3 -->
+    <property>
+        <name>fs.s3a.fast.upload</name>
+        <value>true</value>
+    </property>
+
+    <property>
+        <name>fs.s3a.path.style.access</name>
+        <value>true</value> <!-- Necessário para serviços como MinIO -->
+    </property>
+
+</configuration>
