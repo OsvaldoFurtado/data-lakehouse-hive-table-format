@@ -5,7 +5,8 @@ Local Data Lakehouse with Hive Table Format
 
 
 
-##Stack
+Stack
+=====
 - Apache Airflow: orchestrator
 - Docker: containerization (creates all instances - containers)
 - Postgres & MySQL: Operational Databases
